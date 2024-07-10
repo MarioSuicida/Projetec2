@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form > <!--[formGroup]="registerForm" (ngSubmit)="onSubmit()"--> <!--CRIA O "FORMULÁRIO"-->
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input formControlName="name" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Sobrenome</ion-label>
+      <ion-input formControlName="lastName" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input formControlName="password" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Confirmar Senha</ion-label>
+      <ion-input formControlName="confirmPassword" type="password"></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit" >Registrar</ion-button> <!--[disabled]="registerForm.invalid"-->
+  </form>
+
+  <p>Já tem uma conta ? Faça login <a  (click)="showLogin()">Aqui</a></p> <!-- DIRECIONA PARA O LOGIN-->
+
+</ion-content>
+
+
